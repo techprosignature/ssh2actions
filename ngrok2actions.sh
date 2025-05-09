@@ -35,7 +35,7 @@ fi
 if [[ -n "$(uname | grep -i Linux)" ]]; then
     echo -e "${INFO} Install ngrok ..."
     curl -fsSL https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -o ngrok.zip
-    unzip ngrok.zip ngrok
+    tar -xvzf ngrok.zip ngrok
     rm ngrok.zip
     chmod +x ngrok
     sudo mv ngrok /usr/local/bin
@@ -43,7 +43,7 @@ if [[ -n "$(uname | grep -i Linux)" ]]; then
 elif [[ -n "$(uname | grep -i Darwin)" ]]; then
     echo -e "${INFO} Install ngrok ..."
     curl -fsSL https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -o ngrok.zip
-    unzip ngrok.zip ngrok
+    tar -xvzf ngrok.zip ngrok
     rm ngrok.zip
     chmod +x ngrok
     sudo mv ngrok /usr/local/bin
